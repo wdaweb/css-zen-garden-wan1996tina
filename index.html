@@ -11,6 +11,512 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Playfair+Display:wght@800&display=swap"
     rel="stylesheet">
+    <style>
+      * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+}
+
+html,body{
+    height: 100vh;
+    width:100%;
+}
+
+a{
+    text-decoration: none;
+    color: #555;
+}
+
+.dec1{
+    position: fixed;
+    top:80%;
+    left:93%;
+    z-index: 999;
+    transform: rotate(90deg);
+    color: #58b4ae;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+.dec2{
+    position: fixed;
+    top:40%;
+    left:83.2%;
+    z-index: 999;
+    height: 0.5px;
+    width: 500px;
+    transform: rotate(90deg);
+    background-color: #fff;
+
+}
+/* ------------------------------------------------------------- */
+
+#banner{
+    height: 100vh;
+    position: relative;
+    /* border: 2px solid red;   */
+    overflow: hidden;
+
+}
+
+#banner h1{
+    font-size: 150px;
+    width: 20%;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left:20%;
+}
+
+#banner h2{
+    /* background-color:white; */
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    padding-left:25px;
+}
+
+#banner h2::before{
+    content:'';
+    position: absolute;
+    width: 105%;
+    height:110%;
+    background-color: white;
+    border-radius: 3px;
+    z-index: -1;
+    top: 0;
+    left: 10px;
+}
+
+.bg_video{
+    /* height: 100vh; */
+    width: 100vw;
+    z-index: -999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    object-position: 50% 50%;
+}
+
+/* ---- 介紹區 ----------------------------------------------------------------------------- */
+
+.summary{
+    background-color: #58b4ae;
+    width: 50%;
+    height: 30vh;
+    font-family: 'Playfair Display', serif;
+    margin-left: 25%;
+    padding-top: 120px;
+    padding-left: 200px;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.486);
+
+}
+
+.summary::before{
+    content:'intro';
+    position: absolute;
+    top:70px;
+    left:70px;
+    width: 68px;
+    height: 80px;
+    background-color: #ffe2bc;
+    font-size: 35px;
+    line-height: 100px;
+    font-weight: 300;
+    color: #333;
+    padding-left: 12px;
+}
+
+.summary p{
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.preamble{
+    width: 100%;
+    background-color: #ffe277;
+    padding: 180px 300px;
+    padding-left: 1000px;
+    position: relative;
+}
+
+.preamble p{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 20px 0;
+    letter-spacing: 0.5px;
+}
+
+.preamble h3{
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 25px 0;
+}
+
+.pic1{
+    position: absolute;
+    top: 180px;
+    left: 300px;
+}
+
+/* --------------------------------------- */
+
+.main{
+    background-color: #ffb367;
+    height: 365vh;
+}
+
+.explanation{
+    height: 100vh;
+    position: relative;
+    background: url("/img/tree1.jpg") no-repeat center/cover;
+    background-attachment: fixed;
+    border: 100px solid #ffb367;
+}
+
+.explanation h3{
+    background-color: #ffe2bc;
+    border-radius: 7px;
+    position: absolute;
+    top: 46%;
+    left: 27%;
+    font-size: 70px;
+    padding: 0 15px
+}
+
+.explanation .p1{
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    width: 35%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: white;
+    font-size: 16px;
+    z-index: 999;
+}
+
+.blur_css{
+    height: 150px;
+    width: 650px;
+    z-index: 0;
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    backdrop-filter: blur(5px);
+}
+
+.blur_css2{
+    height: 150px;
+    width: 650px;
+    z-index: 0;
+    position: absolute;
+    top: 67%;
+    left: 53%;
+    backdrop-filter: blur(5px);
+}
+
+
+.explanation .p2{
+    position: absolute;
+    top: 70%;
+    left: 55%;
+    width: 35%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: white;
+    font-size: 16px;
+    z-index: 999;
+
+}
+
+.participation{
+    position: relative;
+    /* border: 1px solid red; */
+    height: 115vh;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    background-color: #ffe2bc;
+}
+
+.participation h3{
+    /* border: 5px solid #000; */
+    position: absolute;
+    top: 6%;
+    left: 32%;
+    font-size: 110px;
+    padding: 0 15px;
+    text-shadow: 0 0 15px rgb(255, 255, 255),8px 8px 2px #58b4ae,-8px -8px 2px #fff;
+}
+
+.participation h3::before{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 2px;
+    top: 60%;
+    left: -50%;
+    background-color: #000;
+}
+
+.participation h3::after{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 2px;
+    top: 60%;
+    left: 110%;
+    background-color: #000;
+}
+.mp1{
+    background-color: white;
+    width: 50%;
+    padding:80px 250px;
+    position: absolute;
+    top: 30%;
+    left:10%;
+}
+.mp1::before{
+    content: '01';
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    font-size: 50px;
+}
+
+.mp2{
+    background-color: white;
+    width: 50%;
+    padding:80px 250px;
+    position: absolute;
+    top:51%;
+    right: 10%;
+}
+
+.mp2::before{
+    content: '02';
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    font-size: 50px;
+}
+
+.mp3{
+    background-color: white;
+    width: 50%;
+    padding:80px 250px;
+    position: absolute;
+    bottom: 0%;
+    left:10%;
+
+}
+
+.mp3::before{
+    content: '03';
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    font-size: 50px;
+}
+
+.benefits{
+    position: relative;
+    padding: 0 100px;
+    border: 120px solid #58b4ae;
+    border-top: 200px solid #58b4ae;
+    border-bottom: 100px solid #58b4ae;
+    height: 70vh;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    background:url('/img/tree2.jpg') no-repeat center/cover, #58b4ae;
+    background-attachment: fixed;
+}
+
+.benefits h3{
+    position: absolute;
+    top: -50%;
+    left: 38%;
+    font-size: 110px;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.benefits p{
+    position: absolute;
+    top: 50%;
+    left:0%;
+    padding: 0 200px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.requirements{
+    position: relative;
+    /* border: 1px solid red; */
+    height: 75vh;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    background-color: #ffe2bc;
+}
+
+.requirements h3{
+    position: absolute;
+    top: 8%;
+    left: 15%;
+    font-size: 60px;
+    padding: 0 15px;
+    color: #000;
+}
+
+.requirements h3::before{
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 40px;
+    height: 40px;
+    top: 30%;
+    left:-20%;
+}
+
+.rp1{
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    padding: 60px 40px;
+    padding-top: 120px;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+}
+
+.rp2{
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    padding: 60px 40px;
+    padding-top: 120px;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    font-size: 9.5px;
+}
+
+.rp3{
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    padding: 60px 40px;
+    padding-top: 120px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+}
+
+.rp4{
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    padding: 60px 40px;
+    padding-top: 120px;
+    position: absolute;
+    top: 35%;
+    left: 70%;
+}
+.rp5{
+    position: absolute;
+    top: 22%;
+    left: 10%;
+    font-size: 8px;
+}
+
+.rp1::before{
+    content:'01';
+    position: absolute;
+    top: 7%;
+    font-size: 18px;
+    border-bottom: 1px solid #000;
+}
+
+.rp2::before{
+    content:'02';
+    position: absolute;
+    top: 7%;
+    font-size: 18px;
+    border-bottom: 1px solid #000;
+
+}
+
+.rp3::before{
+    content:'03';
+    position: absolute;
+    top: 7%;
+    font-size: 18px;
+    border-bottom: 1px solid #000;
+
+}
+
+.rp4::before{
+    content:'04';
+    position: absolute;
+    top: 7%;
+    font-size: 18px;
+    border-bottom: 1px solid #000;
+
+}
+
+#footer{
+    display: flex;
+    justify-content: space-around;
+    z-index: 999;
+    background-color: #222;
+    width: 100%;
+    height: 5vh;
+    padding-top: 20px;
+}
+
+#footer a{
+    margin: 0 150px;
+    background-color: #444;
+    display: block;
+    width: 80%;
+    height: 25px;
+    border-radius:5px ;
+    text-align: center;
+    line-height: 30px;
+    font-family: 'Playfair Display', serif;
+    color:#aaa;
+}
+/* -------------------------------------------- */
+
+.sidebar{
+    background-color: #222;
+    height: 30vh;
+    padding-top: 30px;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.wrapper{
+    position: absolute;
+    right:20% ;
+    /* border: 1px solid red; */
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper h3{
+    margin: 10px 0;
+}
+    </style>
 </head>
 
 <body id="css-zen-garden">
@@ -286,7 +792,7 @@
     const bn_h2 = document.getElementById('banner').getElementsByTagName('h2')[0];
 
     let bgvideo = document.createElement('video');
-    bgvideo.innerHTML = "<source src='./forest_small.mp4' type='video/mp4'>"
+    bgvideo.innerHTML = "<source src='./forest.mp4' type='video/mp4'>"
     bgvideo.setAttribute('autoplay', '');
     bgvideo.setAttribute('loop', true);
     bgvideo.setAttribute('muted', true);
